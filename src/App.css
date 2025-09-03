@@ -1,0 +1,699 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  color: black;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header Styles */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: pink;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  padding: 1rem 0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo h2 {
+  color: black;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.menu-toggle {
+  display: none;
+  font-size: 15px;
+  background: black;
+  border: none;
+  color: pink;
+  cursor: pointer;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  transition: 0.3s ease-in-out;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: black;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: pink;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: white;
+  padding-top: 80px;
+}
+
+.hero-content {
+  flex: 1;
+  padding: 2rem;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: black;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.hero-placeholder,
+.image-placeholder {
+  background: pink;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-weight: 500;
+  min-height: 300px;
+  width: 100%;
+}
+
+/* Button Styles */
+.btn-primary,
+.btn-secondary,
+.btn-primary-large {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary,
+.btn-primary-large {
+  background: black;
+  color: pink;
+}
+
+.btn-primary:hover,
+.btn-primary-large:hover {
+  background: pink;
+  transform: translateY(-2px);
+  color: black;
+}
+
+.btn-secondary {
+  background: pink;
+  color: black;
+  border: 2px solid black;
+}
+
+.btn-secondary:hover {
+  background: black;
+  color: pink;
+}
+
+.btn-primary-large {
+  padding: 16px 32px;
+  font-size: 1.1rem;
+}
+
+.btn-small,
+.btn-small-outline {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-small {
+  background: pink;
+  color: black;
+  border: none;
+}
+
+.btn-small-outline {
+  background: pink;
+  color: black;
+  border: 1px solid #2c5530;
+}
+
+.btn-small:hover {
+  background: pink;
+}
+
+.btn-small-outline:hover {
+  background: pink;
+  color: black;
+}
+
+/* About Section */
+.about {
+  padding: 80px 0;
+  background: pink;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  color: black;
+  margin-bottom: 1.5rem;
+}
+
+.about p {
+  font-size: 1.1rem;
+  color: black;
+  margin-bottom: 2rem;
+}
+
+/* Vision & Mission Section */
+.vision-mission {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.vm-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.vm-card {
+  background: pink;
+  padding: 2.5rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.vm-icon {
+  font-size: 3rem;
+  color: black;
+  margin-bottom: 1.5rem;
+}
+
+.vm-card h3 {
+  font-size: 1.5rem;
+  color: black;
+  margin-bottom: 1rem;
+}
+
+.vm-card p {
+  color: black;
+  font-size: 1rem;
+}
+
+/* Values Section */
+.values {
+  padding: 80px 0;
+  background: pink;
+}
+
+.values h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: black;
+  margin-bottom: 3rem;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.value-card {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+}
+
+.value-icon {
+  font-size: 2.5rem;
+  color: black;
+  margin-bottom: 1rem;
+}
+
+.value-card h3 {
+  color: black;
+  margin-bottom: 1rem;
+}
+
+.value-card p {
+  color: black;
+  font-size: 0.95rem;
+}
+
+/* Services Section */
+.services {
+  padding: 80px 0;
+  background: white;
+  color: black;
+}
+
+.services h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: black;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  background: pink;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid black;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  color: black;
+  margin-bottom: 1rem;
+}
+
+.service-card h3 {
+  margin-bottom: 1rem;
+  color: black;
+}
+
+.service-card p {
+  color: black;
+  font-size: 0.95rem;
+}
+
+/* Why Choose Us Section */
+.why-choose {
+  padding: 80px 0;
+  background: pink;
+}
+
+.why-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.why-text h2 {
+  font-size: 2.5rem;
+  color: black;
+  margin-bottom: 2rem;
+}
+
+.why-list {
+  list-style: none;
+}
+
+.why-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: black;
+}
+
+.why-list i {
+  color: black;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+}
+
+/* Properties Section */
+.properties {
+  padding: 50px;
+  background: #f8f9fa;
+}
+
+.properties h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: black;
+  /* margin-bottom: 3rem; */
+}
+
+.properties-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1rem;
+}
+
+.property-card {
+  background: transparent;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  height: 350px;
+  /* padding: 0; */
+}
+
+.property-card:hover {
+  transform: translateY(-5px);
+}
+
+.property-image {
+  height: 210px;
+  background: pink;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.property-info {
+  padding: 0.5rem;
+}
+
+.property-info h3 {
+  color: black;
+  /* margin-bottom: 0.5rem; */
+}
+
+.property-info p {
+  color: whitesmoke;
+  margin-bottom: 1rem;
+}
+
+.property-buttons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-around;
+}
+
+/* Testimonials Section */
+.testimonials {
+  padding: 80px 0;
+  background: pink;
+}
+
+.testimonials h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: black;
+  margin-bottom: 3rem;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.testimonial-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.testimonial-content p {
+  font-style: italic;
+  color: black;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.testimonial-author strong {
+  color: black;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.testimonial-author span {
+  color: black;
+  font-size: 0.9rem;
+}
+
+/* CTA Banner */
+.cta-banner {
+  padding: 80px 0;
+  background: pink;
+  color: black;
+  text-align: center;
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: black;
+}
+
+/* Footer */
+.footer {
+  background: black;
+  color: white;
+  padding: 60px 0 20px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+  color: pink;
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+}
+
+.contact-info p {
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contact-info i {
+  color: pink;
+  width: 20px;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: pink;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: pink;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #333;
+  color: pink;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background: pink;
+  transform: translateY(-2px);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid #333;
+  color: #ccc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none; /* You can implement mobile menu later */
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: pink;
+    color: white;
+    padding: 1rem;
+    border-radius: 8px ;
+    width: 200px;
+    text-align: center;
+  }
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu li {
+    margin-bottom: 1rem;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+  
+  .logo h2 {
+    font-size: 1.2rem;
+  }
+  
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    min-height: auto;
+    padding: 120px 0 60px;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+  }
+  
+  .about-content,
+  .why-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .vm-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .values-grid,
+  .services-grid,
+  .properties-grid,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    max-width: 250px;
+  }
+}
