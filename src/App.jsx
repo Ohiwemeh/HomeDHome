@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 import house1 from './assets/house1.jpg'
-import house2 from './assets/house2.jpg'
+// import house2 from './assets/house2.jpg'
+
+import homeee from './assets/homeee.jpg'
 import handshake from './assets/handshake.jpg'
 import house4 from './assets/house4.jpg'
 import house3 from './assets/house3.jpg'
@@ -146,7 +148,7 @@ function App() {
       {/* Hero Banner */}
       <section id="home" className="hero">
         <div className="hero-content">
-          <h1>Making Every Home a Reality in Africa</h1>
+          <h1>To Become a Reality In Every Home In Africa</h1>
           <p>Where dreams begin, families grow, and legacies are built</p>
           <div className="hero-buttons">
             <button className="btn-primary" onClick={() => scrollToSection('properties')}>Explore Properties</button>
@@ -169,11 +171,11 @@ function App() {
             <div className="about-text">
               <h2>About Us</h2>
               <p>At Home D Home Property Ltd, we believe a home is more than just a place to stay—it's the foundation of dreams, security, and belonging. With a commitment to integrity, excellence, accountability, and innovation, we are redefining the property market across Africa.</p>
-              <button className="btn-primary" onClick={() => scrollToSection('values')}>Learn More About Us</button>
+              <button className="btn-primary-sec" onClick={() => scrollToSection('values')}>Learn More About Us</button>
             </div>
             <div className="about-image">
               <img
-              src={house2}
+              src={homeee}
               // alt='Happy Family Home'
               className='image-placeholder'
               />
@@ -416,7 +418,9 @@ function App() {
               <h3>Contact Information</h3>
               <div className="contact-info">
                 <p><i className="fas fa-map-marker-alt"></i> Friendship Junction Opposite Grace Plaza SCC Road Bwari,<br/>BWARI AREA COUNCIL </p>
-                <p><i className="fas fa-phone"></i> +234 (0) 123 456 7890</p>
+                <p><i className="fas fa-phone"></i> 07055509467</p>
+                <p><i className="fas fa-phone"></i> 08060561516</p>
+                <p><i className="fas fa-phone"></i> 09070777737</p>
                 <p><i className="fas fa-envelope"></i> info@homedhomeproperty.com</p>
               </div>
             </div>
